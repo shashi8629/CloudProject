@@ -1,0 +1,3 @@
+
+LOAD DATA INPATH '/user/Hadoop/twitter_data/FlumeData.*'   INTO TABLE tweets;
+

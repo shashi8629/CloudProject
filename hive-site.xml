@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+     <property>
+         <name>fs.default.name</name>
+         <value>hdfs://10.142.0.2:9000</value>
+     </property>
+     <property>
+         <name>mapred.job.tracker</name>
+         <value>10.142.0.2:9001</value>
+     </property>
+
+
+
+<property>
+ <name>hive.aux.jars.path</name>
+ <value>file:///home/shashi/hive-serdes-1.0-SNAPSHOT.jar</value>
+</property>
+
+
+
+</configuration>
