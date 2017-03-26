@@ -1,8 +1,9 @@
 
 
 		TWITTER DATA ANALYTICS IMPLEMENTATION ON GOOGLE CLOUD
-
-
+ All analytical services are very expensive so future goal is to make it very fast and cost efficient. In this project, we will try to build a cost effective, cost efficient and fast web service solution utilizing Google Cloud Platform. 
+The main idea of this project is to build a structure that will help to analytics on twitter data. Right Now,This paper provides  basic  facility of analyicts  like getting number of tweets and retweet_count based on id of user. The Twitter Web Service built on Google cloud platform will give us an exposure to most important areas and tools of cloud computing like processing unstructured data(big data), Apache Flume , Hive and Hadoop Mapreduce, building Rest APIs and deploying them on cloud.
+		
 1)Create two instances on GCP with 7.5 GB ram and 4 CPUS and configure to make ssh connection to instances or install gcloud utility to make ssh connection to instance . 
 
  	 instance-1	us-east1-c	35.185.67.36    (master)   (internal ip  according to google cloud 10.142.0.2)
