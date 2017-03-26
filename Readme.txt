@@ -266,6 +266,7 @@ The main idea of this project is to build a structure that will help to analytic
 	        hive -f  /home/shashi/query3.hql  >  output3
 
           Rest services 
+	  
           *)Eclipse configuration  & created the dynamic web project and  developed  the rest services  for each operation 
 	  *)Compile UserManagement  project by putting whole  project in eclipse.Put all the jar file in lib folder as well as build path of eclipse
 	  *)Create war file by using Export option of Eclipse
@@ -280,21 +281,17 @@ The main idea of this project is to build a structure that will help to analytic
 
                   Example:
                   http://35.185.67.36:8080/UserManagement/rest/UserService/users/2017-03-18T21:27:38Z
-
-
           *)URL : to get the data based on  id of user
  
                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/{id}
-
                   Example: 
                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212147148709888
 
           *)URL : to get the data based on  id of user
-
-                 http://35.185.67.36:8080/UserManagement/rest/UserService/user/{id1}/{id2}
-
-                 Example:
-                 http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212151330344961/843212151326232576
+	  
+                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/{id1}/{id2}
+                   Example:
+                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212151330344961/843212151326232576
 
           
 
