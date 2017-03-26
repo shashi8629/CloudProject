@@ -1,6 +1,6 @@
 
 
-								TWITTER DATA ANALYTICS IMPLEMENTATION ON GOOGLE CLOUD
+		TWITTER DATA ANALYTICS IMPLEMENTATION ON GOOGLE CLOUD
 
 
 1)Create two instances on GCP with 7.5 GB ram and 4 CPUS and configure to make ssh connection to instances or install gcloud utility to make ssh connection to instance . 
