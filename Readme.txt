@@ -10,9 +10,9 @@ The main idea of this project is to build a structure that will help to analytic
 	 instance-2	us-east1-c	35.185.89.152    (slave)   (internal ip  according to google cloud 10.142.0.3)
 
 
-2) Download jdk-7u80-linux-x64.tar.gz, apache-flume-1.7.0-bin.zip, apache-hive-1.2.1-bin.tar.gz from internet on local machine.
+2) Download jdk-7u80-linux-x64.tar.gz  from   http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html , apache-flume-1.7.0-bin.tar.gz  from https://flume.apache.org/download.html , apache-hive-1.2.1-bin.tar.gz from https://www-us.apache.org/dist/hive/hive-1.2.1/  on local machine.
 
-3) copy   jdk-7u80-linux-x64.tar.gz, apache-flume-1.7.0-bin.zip,apache-hive-1.2.1-bin.tar.gz to both the instances.Installation of Hadoop 
+3) copy   jdk-7u80-linux-x64.tar.gz, apache-flume-1.7.0-bin.tar.gz ,apache-hive-1.2.1-bin.tar.gz to both the instances.Installation of Hadoop 
 
 	 *)untar   jdk-7u80-linux-x64.tar.gz  on both instances  and follow the steps.
 	  tar -xvf jdk-7u80-linux-x64.tar.gz
@@ -105,7 +105,7 @@ The main idea of this project is to build a structure that will help to analytic
 5)Installation of Apache Flume version 1.7.0
 
       *)Untar  apache-flume-1.7.0-bin.tar.gz
-      *)Add the configuration file in conf folder
+      *)Add the configuration twit.conf file in conf folder(Creation of twit.conf file is given later).
       *)Execute the command 
 		./bin/flume-ng agent --conf ./conf/ -f  conf/twit.conf  Dflume.root.logger=DEBUG,console -n TwitterAgent 
 
@@ -144,7 +144,7 @@ The main idea of this project is to build a structure that will help to analytic
          	hdfs -mkdir  /user/Hadoop/twitter_data
 
 	*)Apache Flume  Configuration 
-	*)create twit.conf file in conf folder  in root directory of apache-flume
+	*)create twit.conf file in conf folder in root directory of apache-flume
 
 		TwitterAgent.sources = Twitter
 		TwitterAgent.channels = FileChannel
@@ -175,7 +175,7 @@ The main idea of this project is to build a structure that will help to analytic
 		
 	*)configuration of Apache-hive  tool 
 
-	*)create  TwitterDataAvroSchema.avsc file in   home directory of linux  user   and add the below contents 
+	*)create  TwitterDataAvroSchema.avsc file in home directory of linux user account and add the below contents 
 
    
 		{"type":"record",
@@ -270,11 +270,13 @@ The main idea of this project is to build a structure that will help to analytic
           *)Eclipse configuration  & created the dynamic web project and  developed  the rest services  for each operation 
 	  *)Compile UserManagement  project by putting whole  project in eclipse.Put all the jar file in lib folder as well as build path of eclipse
 	  *)Create war file by using Export option of Eclipse
+	  *)Download the  apache-tomcat-8.0.30   from https://tomcat.apache.org/download-80.cgi
           *)Deploy the war file on apache-tomcat server  which is deployed on instance where hadoop and hive is installed
+	 
 
 7)View the output
 
-          *)Download the post man tool and run the example url .Screen shot of output is added in github account
+          *)Download the postman tool from   'https://www.getpostman.com/ and run the example url which is given below .Screen shot of output is added in github account
           *)URL : to get the data based on Timestamp
 
                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/{timestamp}
