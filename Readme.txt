@@ -283,17 +283,21 @@ The main idea of this project is to build a structure that will help to analytic
 
                   Example:
                   http://35.185.67.36:8080/UserManagement/rest/UserService/users/2017-03-18T21:27:38Z
+		  Sample output : output1
+		   
           *)URL : to get the data based on  id of user
  
                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/{id}
                   Example: 
                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212147148709888
+		  Sample output : output2
 
           *)URL : to get the data based on  id of user
 	  
                    http://35.185.67.36:8080/UserManagement/rest/UserService/user/{id1}/{id2}
 		   Example: 
                    http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212151330344961/843212151326232576
+		   Sample output  : output3
 		   
            
 
