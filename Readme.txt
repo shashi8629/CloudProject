@@ -12,14 +12,14 @@ The main idea of this project is to build a structure that will help to analytic
 
 2) Download jdk-7u80-linux-x64.tar.gz  from   http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html , apache-flume-1.7.0-bin.tar.gz  from https://flume.apache.org/download.html , apache-hive-1.2.1-bin.tar.gz from https://www-us.apache.org/dist/hive/hive-1.2.1/  on local machine.
 
-3) copy   jdk-7u80-linux-x64.tar.gz, apache-flume-1.7.0-bin.tar.gz ,apache-hive-1.2.1-bin.tar.gz to both the instances.Installation of Hadoop 
+3) copy   jdk-7u80-linux-x64.tar.gz, apache-flume-1.7.0-bin.tar.gz ,apache-hive-1.2.1-bin.tar.gz to both the instances.
 
 	 *)untar   jdk-7u80-linux-x64.tar.gz  on both instances  and follow the steps.
 	  tar -xvf jdk-7u80-linux-x64.tar.gz
  	  export JAVA_HOME=/home/shashi/jdk1.8.0_121
  	  export PATH=$JAVA_HOME/bin:$PATH
 
-4)hadoop version 2.7.3  on  master node  
+4)Installation of Hadoop version 2.7.3  on  master node  
 
  	*)Uncompress the Hadoo-2.7.3.tar.gz file on master node.
 	*)Add master and slave node in /etc/hosts file
@@ -28,7 +28,7 @@ The main idea of this project is to build a structure that will help to analytic
 			
 	*)Make the password less connection between both of the system.
 
-	*)Set  Hadoop  bin path and Hadoop Home in ./bashrc  file   for   setting environment variable  in both of the system.
+	*)Set Hadoop bin path and Hadoop Home in ./bashrc  file   for   setting environment variable  in both of the system.
 	
 	  export HADOOP_HOME=/home/shashi/hadoop-2.7.3
 	  export HADOOP_MAPRED_HOME=$HADOOP_HOME
@@ -38,11 +38,11 @@ The main idea of this project is to build a structure that will help to analytic
 	  export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 	  export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 
- 	*)Modify $HADOOP_HOME/etc/hadoop/slaves and add ip of all the slave node as master node 
+ 	*)Modify $HADOOP_HOME/etc/hadoop/slaves and add ip of all the nodes or system . 
  	        10.142.0.2     
 		10.142.0.3   
     
-        *) Modify $HADOOP_HOME/etc/hadoop/hadoop-ens.sh and add the JAVA_HOME in that file.Do this one both the system .
+        *) Modify $HADOOP_HOME/etc/hadoop/hadoop-ens.sh and add the JAVA_HOME in that file.Do this one on both the system .
     	   export JAVA_HOME=/home/shashi/jdk1.8.0_121
 
         *)Modify $HADOOP_HOME/etc/hadoop/core-site.xml,$HADOOP_HOME/etc/hadoop/hdfs-site.xml,$HADOOP_HOME/etc/hadoop/yarn-site.xml,$HADOOP_HOME/etc/hadoop/mapred-site.xml  
@@ -92,9 +92,9 @@ The main idea of this project is to build a structure that will help to analytic
 			</configuration>
 
 
-   	*) Uncompress the Hadoo-2.7.3 tar file on slave node & copy core-site.xml,hdfs-site.xml,Yarn-site.xml,mapred-site.xml in /home/shashi/hadoop-2.7.3/etc/hadoop path on 		second instance (35.185.89.152 ) 
+   	*) Uncompress the Hadoo-2.7.3.tar.gz file on slave node & copy core-site.xml,hdfs-site.xml,Yarn-site.xml,mapred-site.xml in $HOME/hadoop-2.7.3/etc/hadoop path on second instance (35.185.89.152 ) 
 
-  	*)copy   ~/.bashrc   in    $HOME path  on second instance (35.185.89.152 ) 
+  	*)copy  ~/.bashrc   in    $HOME path  on second instance (35.185.89.152 ) 
 	
     	*)Run the below command on first instance   35.185.67.36 
     			hadoop namenode -format
@@ -269,7 +269,7 @@ The main idea of this project is to build a structure that will help to analytic
 	  
           *)Eclipse configuration  & created the dynamic web project and  developed  the rest services  for each operation 
 	  *)Compile UserManagement  project by putting whole  project in eclipse.Put all the jar file in lib folder as well as build path of eclipse
-	  *)Create war file by using Export option of Eclipse
+	  *)Create war file by using Export option of Eclipse.
 	  *)Download the  apache-tomcat-8.0.30   from https://tomcat.apache.org/download-80.cgi
           *)Deploy the war file on apache-tomcat server  which is deployed on instance where hadoop and hive is installed
 	 
