@@ -291,9 +291,10 @@ The main idea of this project is to build a structure that will help to analytic
 	  
                    http://35.185.67.36:8080/UserManagement/rest/UserService/user/{id1}/{id2}
                    Example:
-                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212151330344961/843212151326232576
+                   http://35.185.67.36:8080/UserManagement/rest/UserService/user/843212151330344961  \
+		    /843212151326232576
 		   
-             END
+           
 
           
 
